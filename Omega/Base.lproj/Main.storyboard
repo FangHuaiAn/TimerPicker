@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Omega" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtA-NJ-ufd">
+                                <rect key="frame" x="20" y="430.5" width="374" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="9ZM-Et-olD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOr-Kv-Ttg">
+                                <rect key="frame" x="20" y="490.5" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="hoe-c4-Si6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="StartButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MYa-gx-7rn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YC-dF-Vee">
+                                <rect key="frame" x="20" y="600.5" width="374" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="StopButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="33f-bJ-4fO"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTc-3B-xPp">
+                                <rect key="frame" x="0.0" y="94" width="414" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="byA-3K-btN"/>
+                                </constraints>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" name="BgColor"/>
+                        <constraints>
+                            <constraint firstItem="8YC-dF-Vee" firstAttribute="width" secondItem="LOr-Kv-Ttg" secondAttribute="width" id="2cM-nm-gH7"/>
+                            <constraint firstItem="8YC-dF-Vee" firstAttribute="top" secondItem="LOr-Kv-Ttg" secondAttribute="bottom" constant="50" id="4TX-W6-LjD"/>
+                            <constraint firstItem="aTc-3B-xPp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AaF-9h-wN9"/>
+                            <constraint firstItem="8YC-dF-Vee" firstAttribute="height" secondItem="LOr-Kv-Ttg" secondAttribute="height" id="BOs-1b-ghs"/>
+                            <constraint firstItem="mtA-NJ-ufd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Bkg-Xa-Ofm"/>
+                            <constraint firstItem="aTc-3B-xPp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Es9-bF-CHo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mtA-NJ-ufd" secondAttribute="trailing" constant="20" id="Sec-Kg-rp5"/>
+                            <constraint firstItem="mtA-NJ-ufd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Vy4-0M-Egb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LOr-Kv-Ttg" secondAttribute="trailing" constant="20" id="ZPJ-xB-r3A"/>
+                            <constraint firstItem="LOr-Kv-Ttg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="a7m-lb-Hw1"/>
+                            <constraint firstItem="LOr-Kv-Ttg" firstAttribute="top" secondItem="mtA-NJ-ufd" secondAttribute="bottom" constant="25" id="mrw-1R-WXu"/>
+                            <constraint firstItem="aTc-3B-xPp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="pAT-r9-3Ek"/>
+                            <constraint firstItem="8YC-dF-Vee" firstAttribute="centerX" secondItem="LOr-Kv-Ttg" secondAttribute="centerX" id="skc-RL-2ZL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="LeftLabel" destination="mtA-NJ-ufd" id="fOf-95-tvr"/>
+                        <outlet property="StartButton" destination="LOr-Kv-Ttg" id="7YV-C7-Ika"/>
+                        <outlet property="StopButton" destination="8YC-dF-Vee" id="j28-15-mn1"/>
+                        <outlet property="datePicker" destination="aTc-3B-xPp" id="a5V-HH-rsY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BgColor">
+            <color red="0.4779999852180481" green="0.70200002193450928" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
