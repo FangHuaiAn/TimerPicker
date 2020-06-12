@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         self.LeftLabel.text = ""
         self.StopButton.isUserInteractionEnabled = true
         self.StopButton.setTitleColor(.white, for: .normal)
-        
+        self.datePicker.isHidden = true
         
         if let url = Bundle.main.url(forResource: "test", withExtension: "mp3") {
            player = try? AVAudioPlayer(contentsOf: url)
@@ -59,6 +59,7 @@ class ViewController: UIViewController {
                     self.StartButton.isUserInteractionEnabled = true
                     self.StartButton.setTitleColor(.white, for: .normal)
                     
+                    self.datePicker.isHidden = false
                     self.StopButton.isUserInteractionEnabled = false
                     self.StopButton.setTitleColor(.lightGray, for: .normal)
                 }
@@ -79,6 +80,7 @@ class ViewController: UIViewController {
         
         self.StartButton.isUserInteractionEnabled = false
         self.StartButton.setTitleColor(.lightGray, for: .normal)
+        self.datePicker.isHidden = true
         
     }
     
@@ -89,8 +91,11 @@ class ViewController: UIViewController {
             self.StartButton.isUserInteractionEnabled = true
             self.StartButton.setTitleColor(.white, for: .normal)
             
+            self.datePicker.isHidden = false
             self.StopButton.isUserInteractionEnabled = false
             self.StopButton.setTitleColor(.lightGray, for: .normal)
+            
+            
             
             self.player?.stop()
         }
